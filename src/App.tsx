@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { QuestionCard } from './components/QuestionCard';
 import { fetchQuestions, Difficulty, QuestionState } from './API';
+import { initNotification } from './FCM Services/FirebaseService'
 
 import { GlobalStyle, Wrapper } from './App.styles';
 
@@ -82,6 +83,8 @@ function App() {
      <GlobalStyle />
       <Wrapper>
         <h1> Quiz App </h1>
+
+        <button className="notification" onClick={initNotification}> Subscribe to Notifications </button>
 
         { gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
           <button className="start" onClick={startQuiz}>
