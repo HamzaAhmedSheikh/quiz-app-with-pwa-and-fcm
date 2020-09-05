@@ -52,7 +52,28 @@ function App() {
     }    
   }
 
-  const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {}
+  const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
+
+     if(!gameOver) {
+       
+      const answer = e.currentTarget.value; 
+      const correct = questions[number].correct_answer === answer;
+
+      if(correct) setScore(prev => prev + 1)      
+       
+
+      const answerObject = {
+        question: questions[number].question,
+        answer,
+        correct,
+        correctAnswer: questions[number].correct_answer
+      }
+
+       setUserAnswers(prev => [...prev, answerObject])
+
+     }
+
+  }
 
   return (
     <div className="App">
@@ -67,7 +88,7 @@ function App() {
 
       { !gameOver ? (     
         <p className="score">
-          Score: {score}
+          Score: { score }
         </p> ) : null 
       }
 
@@ -79,12 +100,12 @@ function App() {
 
       { !loading && !gameOver ? (
         <QuestionCard 
-          questionNum = { number + 1 }
-          totalQuestions = {TOTAL_QUESTIONS }
-          question = { questions[number].question }
-          answers = { questions[number].answers }
-          userAnswer={ userAnswers ? userAnswers[number]:  undefined }
-          callback={ checkAnswer }
+          questionNum = {number + 1}
+          totalQuestions = {TOTAL_QUESTIONS}
+          question = {questions[number].question}
+          answers = {questions[number].answers}
+          userAnswer={userAnswers ? userAnswers[number]:  undefined}
+          callback={checkAnswer}
        /> ) : null
       }
 
