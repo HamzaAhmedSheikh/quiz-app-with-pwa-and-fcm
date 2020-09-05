@@ -79,10 +79,9 @@ function App() {
 
   return (
     <>
-     <GlobalStyle>
+     <GlobalStyle />
       <Wrapper>
         <h1> Quiz App </h1>
-
 
         { gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
           <button className="start" onClick={startQuiz}>
@@ -118,8 +117,7 @@ function App() {
                 Next 
             </button> ) : null 
         }
-      </Wrapper>       
-     </GlobalStyle>
+      </Wrapper>    
     </>
   );
 }
