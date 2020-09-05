@@ -68,14 +68,14 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .notification {
-    cursor: pointer;   
-    border-radius: 10px;
+    cursor: pointer;
     background: linear-gradient(180deg, #ffffff, #ffcc91);
     border: 2px solid #d38558;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
     height: 30px;    
-    padding: 0 40px;
-    outline: none;    
+    padding: 0 30px;
+    outline: none;   
   }
   
   .start {

@@ -6,6 +6,7 @@ import { initNotification } from './FCM Services/FirebaseService'
 
 import { GlobalStyle, Wrapper } from './App.styles';
 
+
 const TOTAL_QUESTIONS = 10;
 
 type AnswerObject = {
@@ -84,7 +85,7 @@ function App() {
       <Wrapper>
         <h1> Quiz App </h1>
 
-        <button className="notification" onClick={initNotification}> Subscribe to Notifications </button>
+        <button className="notification" onClick={initNotification}> Subscribe the Notification  </button>        
 
         { gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
           <button className="start" onClick={startQuiz}>
