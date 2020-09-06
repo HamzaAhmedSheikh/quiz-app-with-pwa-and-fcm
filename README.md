@@ -2,7 +2,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Project 7A Quiz App with TypeScript PWA and FCM
 
-## Deployed on Firebase 
+### Deployed on Firebase 
+
+#### Live review of my Quiz App link https://quiz-app-with-pwa-and-fcm.firebaseapp.com/
+#### Live review of my Quiz App link#2 https://quiz-app-with-pwa-and-fcm.web.app/
+
 
 ## Available Scripts
 
